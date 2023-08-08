@@ -1,0 +1,734 @@
+/* common */
+.inner{
+	width: 90%;
+	margin: auto;
+}
+
+body{
+	background: #f6fafd;
+}
+
+*{
+	--mainCol: #4d7dcd;
+}
+
+/* header */
+.header .inner{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30px 0;
+}
+
+.header .inner .leftBox{
+	display: flex;
+	align-items: center;
+}
+
+.header .inner .leftBox h2{
+	font-size: 16px;
+	margin: 0 30px;
+}
+
+.header .inner .leftBox .lanBox{
+	position: relative;
+	border: 1px solid #333;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.header .inner .leftBox .lanBox h3{
+	line-height: 1;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.header .inner .leftBox .lanBox ul{
+	position: absolute;
+	left: -1px;
+	bottom: -1px;
+	transform: translate(0,100%);
+	width: calc(100% + 2px);
+	display: none;
+	z-index: 10;
+	background: #f6fafd;
+}
+
+.header .inner .leftBox .lanBox ul li a{
+	text-align: center;
+	line-height: 40px;
+	height: 40px;
+	border: 1px solid #333;
+	border-top: 0;
+	box-sizing: border-box;
+	display: block;
+	transition: all 0.3s;
+}
+
+.header .inner .leftBox .lanBox ul li a:hover{
+	background: #333;
+	color: #fff;
+}
+
+.header .inner .rightBox{
+	display: flex;
+	align-items: center;
+}
+
+.header .inner .rightBox .timeBox{
+	display: flex;
+	align-items: center;
+}
+
+.header .inner .rightBox .timeBox img{
+	margin-right: 10px;
+}
+
+.header .inner .rightBox .timeBox p{
+	font-size: 14px;
+}
+
+.header .inner .rightBox .adminBtn{
+	background: var(--mainCol);
+	display: inline-block;
+	padding: 8px 30px;
+	border-radius: 100px;
+	color: #fff;
+	font-size: 18px;
+	margin: 0 30px;
+}
+
+.header .inner .rightBox .utilBox{
+	display: flex;
+	align-items: center;
+}
+
+.header .inner .rightBox .utilBox li{
+	margin-right: 20px;
+}
+
+.header .inner .rightBox .utilBox li a{
+	font-size: 16px;
+}
+
+.header .inner .rightBox .utilBox li.onoff{
+	margin-right: 0;
+	border: 2px solid var(--mainCol);
+	box-sizing: border-box;
+	width: 100px;
+	height: 45px;
+	border-radius: 100px;
+	background: #f6fafd;
+	position: relative;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.header .inner .rightBox .utilBox li.onoff.off{
+	border-color: #999;
+}
+
+.header .inner .rightBox .utilBox li.onoff span{
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 4px;
+	background: var(--mainCol);
+	transform: translate(0,-50%);
+	transition: all 0.3s;
+}
+
+.header .inner .rightBox .utilBox li.onoff.off span{
+	left: calc(100% - 4px);
+	transform: translate(-100%,-50%);
+	background: #999;
+}
+
+/* deviceSection */
+.deviceSection{
+	padding-top: 20px;
+}
+
+.deviceSection .inner{
+	/* display: flex; */
+	/* justify-content: space-between; */
+}
+
+.deviceSection article{
+	/* width: 15.7%; */
+	background: #fff;
+	box-sizing: border-box;
+	text-align: center;
+	border-radius: 20px;
+	overflow: hidden;
+	margin: 0 10px;
+}
+
+.deviceSection article h3{
+	color: #fff;
+	background: var(--mainCol);
+	font-size: 16px;
+	font-weight: 600;
+	padding: 14px 0;
+	line-height: 1;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.deviceSection article h3:hover{
+	background: #333;
+}
+
+.deviceSection article h4{
+	background: #f7f7f7;
+	color: #959595;
+	font-size: 14px;
+	line-height: 1;
+	padding: 14px 0;
+	font-weight: 500;
+}
+
+.deviceSection article ul{
+	padding: 20px 30px;
+}
+
+.deviceSection article ul li{
+	margin-bottom: 5px;
+}
+
+.deviceSection article ul li a{
+	display: flex;
+	align-items: center;
+}
+
+.deviceSection article ul li:last-child{
+	margin-bottom: 0;
+}
+
+.deviceSection article ul li .txtBox{
+	margin-left: 20px;
+	padding-left: 20px;
+	position: relative;
+	font-size: 16px;
+	font-weight: 600;
+	text-align: left;
+	line-height: 1.4;
+}
+
+.deviceSection article ul li .txtBox::before{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 1px;
+	height: 14px;
+	background: #333;
+	transform: translate(0,-50%);
+}
+
+.deviceSection article ul li .txtBox strong{
+	color: var(--mainCol);
+}
+
+.deviceSection article .bottom{
+	background: var(--mainCol);
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 14px 0 16px;
+	display: block;
+}
+
+.deviceSection .slick-dots{
+	bottom: -40px;
+}
+
+.deviceSection .slick-dots li{
+	width: 12px;
+	height: 12px;
+	background: #bababa;
+	border-radius: 50%;
+	position: relative;
+	padding: 0;
+	transition: all 0.4s;
+}
+
+.deviceSection .slick-dots li.slick-active{
+	background: var(--mainCol);
+	width: 50px;
+	border-radius: 100px;
+}
+
+.deviceSection .slick-dots li button{
+	opacity: 0 !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.deviceSection .slick-dots li button::before{
+	width: 100%;
+	height: 100%;
+}
+
+/* dataSection */
+.dataSection{
+	padding-top: 50px;
+	margin-bottom: 100px;
+}
+
+.searchBox ul{
+	display: flex;
+	justify-content: center;
+	
+}
+
+.searchBox ul li{
+	margin: 0 10px;
+}
+
+.dataSection ul li input,
+.dataSection ul li select{
+	width: 180px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border: 1px solid var(--mainCol);
+	font-size: 16px;
+	border-radius: 10px;
+	position: relative;
+}
+
+.dataSection ul li input::before {
+  content: attr(data-placeholder);
+  width: 100%;
+}
+
+.dataSection ul li input:focus::before,
+.dataSection ul li input:valid::before {
+  display: none;
+}
+
+.dataSection ul li input::placeholder{
+	color: #333;
+}
+
+.dataSection ul li input#d_id{
+	cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+    position: absolute;
+	right: -10px;
+	top: 50%;
+	transform: translate(-10px,-50%);
+	padding-left: 180px;
+	/* height: 100%; */
+	display: flex;
+	align-items: center;
+}
+
+.dataSection .sendOk{
+	width: 180px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: var(--mainCol);
+	font-size: 16px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+} 
+
+.dataSection .sendOk img{
+	margin-right: 5px;
+}
+
+.dataSection .dataBox{
+	min-height: 400px;
+	background: #fff;
+	border-radius: 20px;
+	overflow: hidden;
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.dataSection .dataBox > div{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.dataSection .dataBox .leftBox{
+	width: 60%;
+	background: #eee;
+}
+
+.dataSection .dataBox .rightBox{
+	width: 40%;
+}
+
+/* fixBox */
+.fixBox{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	z-index: 100;
+	display: none;
+}
+
+.fixBox article{
+	width: 90%;
+	max-width: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: #fff;
+	border-radius: 20px;
+	box-sizing: border-box;
+	padding: 50px;
+	text-align: center;
+}
+
+.fixBox article h2{
+	color: var(--mainCol);
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.fixBox article .inputBox{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 80px;
+}
+
+.fixBox article .inputBox label{
+	font-size: 16px;
+	font-weight: 500;
+	margin-right: 10px;
+}
+
+.fixBox article .inputBox input{
+	width: 200px;
+	border: 1px solid var(--mainCol);
+	border-radius: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 16px;
+	height: 40px;
+	line-height: 38px;
+}
+
+.fixBox article ul{
+	display: flex;
+	justify-content: space-between;
+}
+
+.fixBox article ul li{
+	width: 48%;
+}
+
+.fixBox article ul li a{
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	background: var(--mainCol);
+	border-radius: 10px;
+}
+
+.fixBox article ul li:first-child a{
+	background: #999;
+}
+
+/* ------------------------------------------------------------responsive 1200 */
+@media screen and (max-width: 1200px){
+
+/* header */
+.logo{
+	width: 120px;
+}
+
+.logo img{
+	width: 100%;
+}
+
+.header .inner .leftBox h2 {
+    font-size: 14px;
+    margin: 0 15px;
+}
+
+.header .inner .leftBox .lanBox {
+    padding: 9px 10px;
+}
+
+.header .inner .rightBox .adminBtn {
+    padding: 8px 15px;
+    font-size: 14px;
+    margin: 0 15px;
+}
+
+.header .inner .rightBox .utilBox li a {
+    font-size: 14px;
+}
+
+.header .inner .rightBox .utilBox li.onoff {
+    border: 2px solid var(--mainCol);
+    width: 60px;
+    height: 35px;
+}
+
+.header .inner .rightBox .utilBox li.onoff span {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    background: var(--mainCol);
+    transform: translate(0,-50%);
+    transition: all 0.3s;
+}
+
+}
+
+
+
+/* ------------------------------------------------------------responsive 720 */
+@media screen and (max-width: 720px){
+
+/* header */
+.logo{
+	width: 25%;
+}
+
+.header .inner{
+	flex-wrap: wrap;
+	padding: 3vw 0;
+}
+
+.header .inner .leftBox{
+	width: 100%;
+	position: relative;
+	margin-bottom: 2vw;
+	position: relative;
+	z-index: 5;
+}
+
+.header .inner .leftBox h2 {
+    font-size: 3vw;
+    margin: 0 3vw;
+}
+
+.header .inner .leftBox .lanBox {
+    padding: 2vw 3vw;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(0,-50%);
+}
+
+.header .inner .leftBox .lanBox h3 {
+    font-size: 3vw;
+    font-weight: 500;
+}
+
+.header .inner .leftBox .lanBox ul li a{
+	line-height: 9vw;
+	height: 9vw;
+	font-size: 3vw;
+}
+
+.header .inner .leftBox .lanBox img{
+	width: 2vw;
+}
+
+.header .inner .rightBox{
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.header .inner .rightBox .timeBox img{
+	width: 4vw;
+	margin-right: 1vw;
+}
+
+.header .inner .rightBox .timeBox p{
+	font-size: 2.5vw;
+}
+
+.header .inner .rightBox .adminBtn {
+    padding: 1.5vw 3vw;
+    font-size: 2.5vw;
+    margin: 0 3vw;
+}
+
+.header .inner .rightBox .utilBox li {
+    margin-right: 2vw;
+	line-height: 1;
+}
+
+.header .inner .rightBox .utilBox li a {
+    font-size: 2.5vw;
+}
+
+.header .inner .rightBox .utilBox li.onoff {
+    border: 1px solid var(--mainCol);
+    width: 10vw;
+    height: 6vw;
+}
+
+.header .inner .rightBox .utilBox li.onoff span {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    background: var(--mainCol);
+    transform: translate(0,-50%);
+    transition: all 0.3s;
+}
+
+/*  */
+.deviceSection article h3 {
+    font-size: 3vw;
+    padding: 3vw 0;
+}
+
+.deviceSection article h4 {
+    font-size: 3vw;
+    padding: 2vw 0;
+	font-weight: 400;
+}
+
+.deviceSection article ul {
+    padding: 3vw 3vw;
+}
+
+.deviceSection article ul li{
+	margin-bottom: 2vw;
+}
+
+.deviceSection article ul li img{
+	width: 5vw;
+}
+
+.deviceSection article ul li .txtBox {
+    margin-left: 3vw;
+    padding-left: 3vw;
+    font-size: 2.5vw;
+}
+
+
+.deviceSection article .bottom {
+    font-size: 3vw;
+    padding: 3vw 0;
+}
+
+.deviceSection .slick-dots{
+	bottom: -40px;
+}
+
+.deviceSection .slick-dots li{
+	width: 2vw;
+	height: 2vw;
+}
+
+.deviceSection .slick-dots li.slick-active{
+	width: 7vw;
+}
+
+.searchBox ul{
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.searchBox ul li{
+	width: 49%;
+	margin: 0;
+	margin-top: 1vw;
+}
+
+.dataSection ul li input, .dataSection ul li select {
+    width: 100%;
+    height: 10vw;
+    line-height: 10vw;
+    font-size: 3vw;
+}
+
+.dataSection .sendOk {
+    width: 100%;
+    height: 10vw;
+    line-height: 10vw;
+    font-size: 3vw;
+}
+
+.dataSection .sendOk img{
+	width: 3vw;
+}
+
+.dataSection .dataBox .leftBox{
+	width: 100%;
+}
+
+.dataSection .dataBox .rightBox{
+	width: 100%;
+}
+
+/* fixBox */
+.fixBox article{
+	padding: 10vw 7.5%;
+}
+
+.fixBox article h2{
+	font-size: 4vw;
+	margin-bottom: 5vw;
+	text-align: center;
+}
+
+.fixBox article .inputBox{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 15vw;
+}
+
+.fixBox article .inputBox label{
+	font-size: 3vw;
+	margin-right: 2vw;
+}
+
+.fixBox article .inputBox input{
+	width: 45vw;
+	font-size: 3vw;
+	height: 9vw;
+	line-height: 9vw;
+}
+
+.fixBox article ul li a{
+	font-size: 3vw;
+	height: 9vw;
+	line-height: 9vw;
+}
+
+
+}
